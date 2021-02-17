@@ -1,7 +1,6 @@
 {
   "@extends": "default",
   "color" : {
-    "@extends": "@default.color",
     "primary-faded": "#ed6e51",
     "primary-light": "#ffd5cc",
     "primary-bright": "#ec2c00",
@@ -10,14 +9,14 @@
     "accent1" : "#00bcf1",
     "accent2" : "#0147a5"
   },
-  "accent1-mode" : {
-    "@extend" : "primary-mode",
+  "color-mode-accent1" : {
+    "@extends" : "color-mode-white",
     "primary-foreground": "var(--color-accent1)",
     "secondary-foreground": "var(--color-accent2)",
     "accent": "var(--color-primary)"
   },
-  "accent2-mode" : {
-    "@extend" : "primary-mode",
+  "color-mode-accent2" : {
+    "@extends" : "color-mode-black",
     "primary-foreground": "var(--color-accent2)",
     "secondary-foreground": "var(--color-accent1)",
     "accent": "var(--color-primary)"
