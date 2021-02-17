@@ -1,0 +1,16 @@
+{
+  "@extends": "default",
+  "color" : {
+    "primary-faded": "#e3abc7",
+    "primary-light": "#ffd5cc",
+    "primary-bright": "#f5007b",
+    "primary-main": "#e2127A",
+    "primary-dark": "#e2127A"
+  },
+  "font1" : {
+    "family": "Egyptienne,Georgia,serif"
+  },
+  "font2" : {
+    "family": "'Miller Text',Georgia,serif"
+  }
+}

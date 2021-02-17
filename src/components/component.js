@@ -1,7 +1,9 @@
 import Nav from "./nav/index"
+import RelatedList from "./related_list/index"
 
 const ComponentLibrary = {
   nav : Nav,
+  related_list: RelatedList
 };
 
 class Component {
@@ -16,6 +18,7 @@ class Component {
   
   static getComponentInstance(componentName) {
     const Klass = ComponentLibrary[componentName];
+    console.log(componentName, Klass);
     if (Klass) {
       return new Klass();
     }
