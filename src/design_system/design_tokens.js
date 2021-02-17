@@ -18,6 +18,17 @@ class DesignSystemTokens {
       themeJson = _.merge(extendedJson, themeJson);
     }
 
+    for (let palette in themeJson) {
+      if (["default", "@extends"].indexOf(palette) < 0 ) {
+        if (themeJson[palette]["@extends"]) {
+          // merge these two objects together, overwriting the defaults
+          const extended = themeJson[palette]["@extends"];
+          delete themeJson[palette]["@extends"];
+          themeJson[palette] = _.merge(_.cloneDeep(themeJson[extended]), themeJson[palette])
+        }
+      }
+    }
+
     this._theme = themeJson;
     return this._theme;    
   }
@@ -26,11 +37,6 @@ class DesignSystemTokens {
     let themeCSSVars = [];
     for (let palette in this.theme) {
       if (["default", "@extends"].indexOf(palette) < 0 ) {
-        if (this.theme[palette]["@extends"]) {
-          // merge these two objects together, overwriting the defaults
-          this.theme[palette] = _.merge(_.cloneDeep(this.theme[this.theme[palette]["@extends"]]), this.theme[palette])
-          delete this.theme[palette]["@extends"];
-        }
         for (let aspect in this.theme[palette]) {
           themeCSSVars.push(` --${palette}-${aspect} : ${this.theme[palette][aspect]};`);
         }
@@ -38,7 +44,6 @@ class DesignSystemTokens {
     }
     return themeCSSVars.join("\n");
   }
-
 
   renderTokens(cssSelector=":root"){   
     return `
