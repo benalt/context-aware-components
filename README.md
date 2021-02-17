@@ -1,6 +1,5 @@
-
-
-
+# Basic install
+This is a prototype demonstrating how we might use layered themes and css-variable based instance overrides.
 # Basic install
 
 `npm install`

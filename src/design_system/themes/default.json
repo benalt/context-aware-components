@@ -17,38 +17,6 @@
     "gray80": "#1e1e1e",
     "black": "#000000"
   },
-  "dark-mode" : {
-    "primary-foreground": "var(--color-white)",
-    "secondary-foreground": "var(--color-primary-light)",
-    "accent": "var(--color-white)",
-    "ui": "var(--color-primary-faded)",
-    "buttons": "var(--color-white)",
-    "background": "var(--color-primary-main)"
-  },
-  "light-mode" : {
-    "primary-foreground": "var(--color-gray80)",
-    "secondary-foreground": "var(--color-gray60)",
-    "accent": "var(--color-primary-main)",
-    "ui": "var(--color-gray20)",
-    "buttons": "var(--color-primary-main)",
-    "background": "var(--color-gray05)"
-  },
-  "white-mode" : {
-    "primary-foreground": "var(--color-gray90)",
-    "secondary-foreground": "var(--color-gray60)",
-    "accent": "var(--color-primary-main)",
-    "ui": "var(--color-primary-dark)",
-    "buttons": "var(--color-gray10)",
-    "background": "var(--color-white)"
-  },
-  "black-mode" : {
-    "primary-foreground": "var(--color-white)",
-    "secondary-foreground": "var(--color-gray40)",
-    "accent": "var(--color-primary-bright)",
-    "ui": "var(--color-gray70)",
-    "buttons": "var(--color-primary-main)",
-    "background": "var(--color-black)"
-  },
   "font1" : {
     "family": "Graphik-Regular",
     "fallback-family" : "sans-serif",
@@ -166,6 +134,38 @@
     "large": "1100px",
     "xlarge": "1400px",
     "xxlarge": "1500px"
+  },
+  "color-mode-dark" : {
+    "primary-foreground": "var(--color-white)",
+    "secondary-foreground": "var(--color-primary-light)",
+    "accent": "var(--color-white)",
+    "ui": "var(--color-primary-faded)",
+    "buttons": "var(--color-white)",
+    "background": "var(--color-primary-main)"
+  },
+  "color-mode-light" : {
+    "primary-foreground": "var(--color-gray80)",
+    "secondary-foreground": "var(--color-gray60)",
+    "accent": "var(--color-primary-main)",
+    "ui": "var(--color-gray20)",
+    "buttons": "var(--color-primary-main)",
+    "background": "var(--color-gray05)"
+  },
+  "color-mode-white" : {
+    "primary-foreground": "var(--color-gray90)",
+    "secondary-foreground": "var(--color-gray60)",
+    "accent": "var(--color-primary-main)",
+    "ui": "var(--color-primary-dark)",
+    "buttons": "var(--color-gray10)",
+    "background": "var(--color-white)"
+  },
+  "color-mode-black" : {
+    "primary-foreground": "var(--color-white)",
+    "secondary-foreground": "var(--color-gray40)",
+    "accent": "var(--color-primary-bright)",
+    "ui": "var(--color-gray70)",
+    "buttons": "var(--color-primary-main)",
+    "background": "var(--color-black)"
   },
   "default" : {
     "color-mode": "white-mode",

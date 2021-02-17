@@ -12,6 +12,10 @@ class CSSLoader {
     for (let i=0; i < this.context.components.length; i++ ) {
       const componentName = this.context.components[i];
       const cssFile = `../components/${componentName}/${theme}.css`;
+      
+      if (!fs.existsSync(path.resolve(__dirname, cssFile))){
+        cssFile = `../components/${componentName}/default.css`
+      }
       csses.push(`/* from ${cssFile} */`);
       csses.push(fs.readFileSync( path.resolve(__dirname, cssFile), 'utf8'));
     }
