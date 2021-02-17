@@ -1,28 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-</head>
-<body class="container">
-
-<header>
-    
-</header>
-
-<main>
-  <div class="jumbotron">
-    <h1><%- title %></h1>
-    <div class="component-area">
+  <head>
+  </head>
+  <body class="container">
+    <main class="component-area">
       <%- renderComponent(context.componentName) %>
-    </div>
-  </div>
-</main>
+    </main>
 
-<footer>
-  
-</footer>
-<style type="text/css">
-  <%= renderDesignTokens() %>
-  <%= renderStylesheets() %>
-</style>
-</body>
+    <style type="text/css">
+      <%= renderDesignTokens() %>
+      <%= renderStylesheets() %>
+    </style>
+  </body>
 </html>
