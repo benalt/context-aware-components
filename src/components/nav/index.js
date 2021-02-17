@@ -10,12 +10,9 @@ const template = fs.readFileSync( path.resolve(__dirname, './index.ejs'), 'utf8'
 // throws TypeError: Super expression must either be null or a function
 
 export default class Nav {
-  constructor(renderContext, data) { 
-    this.renderContext = renderContext;
-    this.data = data;
-  }
+  constructor() {}
   
   render(context) {
-    return ejs.render(template, context.data, {});
+    return ejs.render(template, context, {});
   }
 }

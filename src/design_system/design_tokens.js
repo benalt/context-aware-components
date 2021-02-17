@@ -18,11 +18,10 @@ class DesignSystemTokens {
 
   themeToCssVars () {
     let themeCSSVars = [];
-    console.log(JSON.stringify(this.theme))
     for (let palette in this.theme) {
       if (palette !== "default") {
         for (let aspect in this.theme[palette]) {
-          themeCSSVars.push(`--${palette}-${aspect} : ${this.theme[palette][aspect]};`);
+          themeCSSVars.push(` --${palette}-${aspect} : ${this.theme[palette][aspect]};`);
         }
       }
     }

@@ -26,12 +26,12 @@
     "background": "var(--color-primary-main)"
   },
   "light-mode" : {
-    "primary-foreground": "var(--color-gray80",
-    "secondary-foreground": "var(--color-gray60",
-    "accent": "var(--color-primary-main",
-    "ui": "var(--color-gray20",
-    "buttons": "var(--color-primary-main",
-    "background": "var(--color-gray05"
+    "primary-foreground": "var(--color-gray80)",
+    "secondary-foreground": "var(--color-gray60)",
+    "accent": "var(--color-primary-main)",
+    "ui": "var(--color-gray20)",
+    "buttons": "var(--color-primary-main)",
+    "background": "var(--color-gray05)"
   },
   "white-mode" : {
     "primary-foreground": "var(--color-gray90)",

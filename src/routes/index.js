@@ -10,14 +10,15 @@ router.get('/', function(req, res, next) {
 
   let context = { 
     id: "index-context",
-    components : []
+    components : [],
+    theme: req.query.theme || null,
+    componentName: req.query.componentName || null,
+    componentInstance: req.query.componentInstance || null
   };
 
   res.render('index', { 
     title: 'Component Explorer', 
     context: context, 
-    componentName: req.query.componentName || null,
-    componentInstance: req.query.componentInstance || null,
     renderComponent: ( componentName ) => {
       // track which components are in use
       context.components.push(componentName);
@@ -30,8 +31,9 @@ router.get('/', function(req, res, next) {
     },
     renderStylesheets: () => {
       let cssLoader = new DesignSystemCSSLoader(context);
-      return `/* styles for ${ context.components.join(', ')} */ 
-              ${cssLoader.renderCss(context)}`;
+      return `
+/* rendidering styles for ${ context.components.join(', ')} */ 
+${cssLoader.renderCss(context)}`;
     }
   });
 });
