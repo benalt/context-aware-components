@@ -1,11 +1,13 @@
-const express = require('express');
-const router = express.Router();
-const Component = require('../components/component');
-const DesignSystemTokens = require('../design_system/design_tokens');
-const DesignSystemCSSLoader = require('../design_system/css_loader');
+import express from 'express';
+import Component from '../components/component';
+import DesignSystemTokens from '../design_system/design_tokens';
+import DesignSystemCSSLoader from '../design_system/css_loader';
+
+var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
+
   let context = { 
     id: "index-context",
     components : []
@@ -14,6 +16,8 @@ router.get('/', function(req, res, next) {
   res.render('index', { 
     title: 'Component Explorer', 
     context: context, 
+    componentName: req.query.componentName || null,
+    componentInstance: req.query.componentInstance || null,
     renderComponent: ( componentName ) => {
       // track which components are in use
       context.components.push(componentName);

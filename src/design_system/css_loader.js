@@ -1,14 +1,7 @@
-// load palettes
-
-// token mappings
-
-// tokend 
-
 class CSSLoader {
   
-  constructor(context) {
-    
-  }
+  constructor(context) {}
+
   renderCss(){
     return "Styles!";
   }

@@ -1,0 +1,374 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Design System Theme",
+  "type": "object",
+  "options": {
+    "disable_edit_json": true,
+    "disable_properties": true
+  },
+  "additionalProperties": false,
+  "required": [
+    "colors", "dark_mode", "light_mode", "white_mode", "black_mode",
+    "font1", "font2", "font3", "font4", "font_scale1", "font_scale2",
+    "spacing_scale_small", "spacing_scale_medium", "spacing_scale_large",
+    "defaults", "breakpoints"
+  ],
+  "properties": {
+    "colors": {
+      "type": "object",
+      "options": {
+        "disable_edit_json": true,
+        "disable_properties": true
+      },
+      "properties": {
+        "color1_faded": { "$ref": "#/definitions/color_raw" },
+        "color1_light": { "$ref": "#/definitions/color_raw" },
+        "color1_bright": { "$ref": "#/definitions/color_raw" },
+        "color1_main": { "$ref": "#/definitions/color_raw" },
+        "color1_dark": { "$ref": "#/definitions/color_raw" },
+        "color2_faded": { "$ref": "#/definitions/color_raw" },
+        "color2_light": { "$ref": "#/definitions/color_raw" },
+        "color2_bright": { "$ref": "#/definitions/color_raw" },
+        "color2_main": { "$ref": "#/definitions/color_raw" },
+        "color2_dark": { "$ref": "#/definitions/color_raw" },
+        "white": { "$ref": "#/definitions/color_raw" },
+        "gray05": { "$ref": "#/definitions/color_raw" },
+        "gray10": { "$ref": "#/definitions/color_raw" },
+        "gray20": { "$ref": "#/definitions/color_raw" },
+        "gray30": { "$ref": "#/definitions/color_raw" },
+        "gray40": { "$ref": "#/definitions/color_raw" },
+        "gray60": { "$ref": "#/definitions/color_raw" },
+        "gray70": { "$ref": "#/definitions/color_raw" },
+        "gray80": { "$ref": "#/definitions/color_raw" },
+        "gray90": { "$ref": "#/definitions/color_raw" },
+        "black": { "$ref": "#/definitions/color_raw" }
+      },
+      "required": [
+        "color1_faded", "color1_light", "color1_bright", "color1_main", "color1_dark",
+        "color2_faded", "color2_light", "color2_bright", "color2_main", "color2_dark",
+        "white", "gray05", "gray10", "gray20", "gray30",
+        "gray40", "gray60", "gray70", "gray80", "gray90", "black"
+      ]
+    },
+    "dark_mode": { "$ref": "#/definitions/color_mode" },
+    "light_mode": { "$ref": "#/definitions/color_mode" },
+    "white_mode": { "$ref": "#/definitions/color_mode" },
+    "black_mode": { "$ref": "#/definitions/color_mode" },
+    "font1": { "$ref": "#/definitions/font" },
+    "font2": { "$ref": "#/definitions/font" },
+    "font3": { "$ref": "#/definitions/font" },
+    "font4": { "$ref": "#/definitions/font" },
+    "font_scale1": { "$ref": "#/definitions/font_scale" },
+    "font_scale2": { "$ref": "#/definitions/font_scale" },
+    "spacing_scale_small": { "$ref": "#/definitions/spacing_scale" },
+    "spacing_scale_medium": { "$ref": "#/definitions/spacing_scale" },
+    "spacing_scale_large": { "$ref": "#/definitions/spacing_scale" },
+    "breakpoints": {
+      "type" : "object",
+      "additionalProperties": false,
+      "options": {
+        "disable_edit_json": true,
+        "disable_properties": true,
+        "collapsed": true
+      },
+      "required": ["xsmall", "small", "medium", "large", "xlarge", "xxlarge"],
+      "properties": {
+        "xsmall" : { "$ref": "#/definitions/size" },
+        "small": { "$ref": "#/definitions/size" },
+        "medium": { "$ref": "#/definitions/size" },
+        "large": { "$ref": "#/definitions/size" },
+        "xlarge": { "$ref": "#/definitions/size" },
+        "xxlarge": { "$ref": "#/definitions/size" }
+      }
+    },
+    "defaults": {
+      "options": {
+        "disable_edit_json": true,
+        "disable_properties": true
+      },
+      "type": "object",
+      "additionalProperties": false,
+      "required" : [
+        "color_mode", "body_font", "body_font_weight", "body_font_line_height", "alt_body_font", "alt_body_font_weight", "alt_body_font_line_height", "header_font",
+        "header_font_weight", "header_font_line_height", "alt_header_font",
+        "alt_header_font_weight", "alt_header_font_line_height", "meta_font", "meta_font_weight", "meta_font_line_height", "heading_sizeXXL", "heading_sizeXL", "heading_sizeL",
+        "heading_sizeM", "heading_sizeS", "heading_sizeXS", "heading_sizeXXS", "alt_heading_sizeXXL", "alt_heading_sizeXL", "alt_heading_sizeL",
+        "alt_heading_sizeM", "alt_heading_sizeS", "alt_heading_sizeXS", "alt_heading_sizeXXS", "spacing_scale", "font_scale", "content_max_width"
+      ],
+      "properties": {
+        "color_mode" : {
+          "type": "string",
+          "enum": ["dark_mode", "light_mode", "white_mode", "black_mode"]
+        },
+        "body_font" : {
+          "type": "string",
+          "enum": ["font1", "font2", "font3", "font4"]
+        },
+        "body_font_line_height" : {
+          "type": "string",
+          "enum": ["line_height_ratio_small", "line_height_ratio_medium", "line_height_ratio_large"]
+        },
+        "body_font_weight" : {
+          "type": "string",
+          "enum": [ "normal", "bold" ]
+        },
+        "alt_body_font" : {
+          "type": "string",
+          "enum": ["font1", "font2", "font3", "font4"]
+        },
+        "alt_body_font_line_height" : {
+          "type": "string",
+          "enum": ["line_height_ratio_small", "line_height_ratio_medium", "line_height_ratio_large"]
+        },
+        "alt_body_font_weight" : {
+          "type": "string",
+          "enum": [ "normal", "bold" ]
+        },
+        "header_font" : {
+          "type": "string",
+          "enum": ["font1", "font2", "font3", "font4"]
+        },
+        "header_font_line_height" : {
+          "type": "string",
+          "enum": ["line_height_ratio_small", "line_height_ratio_medium", "line_height_ratio_large"]
+        },
+        "header_font_weight" : {
+          "type": "string",
+          "enum": [ "normal", "bold" ]
+        },
+        "alt_header_font" : {
+          "type": "string",
+          "enum": ["font1", "font2", "font3", "font4"]
+        },
+        "alt_header_font_line_height" : {
+          "type": "string",
+          "enum": ["line_height_ratio_small", "line_height_ratio_medium", "line_height_ratio_large"]
+        },
+        "alt_header_font_weight" : {
+          "type": "string",
+          "enum": [ "normal", "bold" ]
+        },
+        "meta_font" : {
+          "type": "string",
+          "enum": ["font1", "font2", "font3", "font4"]
+        },
+        "meta_font_line_height" : {
+          "type": "string",
+          "enum": ["line_height_ratio_small", "line_height_ratio_medium", "line_height_ratio_large"]
+        },
+        "meta_font_weight" : {
+          "type": "string",
+          "enum": [ "normal", "bold" ]
+        },
+        "heading_size_xxlarge" : {
+          "type": "string",
+          "enum": [ "font_size1", "font_size2", "font_size3", "font_size4", "font_size5",
+          "font_size6", "font_size7", "font_size8", "font_size9", "font_size10", "font_size11", "font_size12" ]
+        },
+        "heading_size_xlarge" : {
+          "type": "string",
+          "enum": [ "font_size1", "font_size2", "font_size3", "font_size4", "font_size5",
+          "font_size6", "font_size7", "font_size8", "font_size9", "font_size10", "font_size11", "font_size12" ]
+        },
+        "heading_size_large" : {
+          "type": "string",
+          "enum": [ "font_size1", "font_size2", "font_size3", "font_size4", "font_size5",
+          "font_size6", "font_size7", "font_size8", "font_size9", "font_size10", "font_size11", "font_size12" ]
+        },
+        "heading_size_medium" : {
+          "type": "string",
+          "enum": [ "font_size1", "font_size2", "font_size3", "font_size4", "font_size5",
+          "font_size6", "font_size7", "font_size8", "font_size9", "font_size10", "font_size11", "font_size12" ]
+        },
+        "heading_size_small" : {
+          "type": "string",
+          "enum": [ "font_size1", "font_size2", "font_size3", "font_size4", "font_size5",
+          "font_size6", "font_size7", "font_size8", "font_size9", "font_size10", "font_size11", "font_size12" ]
+        },
+        "heading_size_xsmall" : {
+          "type": "string",
+          "enum": [ "font_size1", "font_size2", "font_size3", "font_size4", "font_size5",
+          "font_size6", "font_size7", "font_size8", "font_size9", "font_size10", "font_size11", "font_size12" ]
+        },
+        "heading_size_xxsmall" : {
+          "type": "string",
+          "enum": [ "font_size1", "font_size2", "font_size3", "font_size4", "font_size5",
+          "font_size6", "font_size7", "font_size8", "font_size9", "font_size10", "font_size11", "font_size12" ]
+        },
+        "alt_heading_size_xxlarge" : {
+          "type": "string",
+          "enum": [ "font_size1", "font_size2", "font_size3", "font_size4", "font_size5",
+          "font_size6", "font_size7", "font_size8", "font_size9", "font_size10", "font_size11", "font_size12" ]
+        },
+        "alt_heading_size_xlarge" : {
+          "type": "string",
+          "enum": [ "font_size1", "font_size2", "font_size3", "font_size4", "font_size5",
+          "font_size6", "font_size7", "font_size8", "font_size9", "font_size10", "font_size11", "font_size12" ]
+        },
+        "alt_heading_size_large" : {
+          "type": "string",
+          "enum": [ "font_size1", "font_size2", "font_size3", "font_size4", "font_size5",
+          "font_size6", "font_size7", "font_size8", "font_size9", "font_size10", "font_size11", "font_size12" ]
+        },
+        "alt_heading_size_medium" : {
+          "type": "string",
+          "enum": [ "font_size1", "font_size2", "font_size3", "font_size4", "font_size5",
+          "font_size6", "font_size7", "font_size8", "font_size9", "font_size10", "font_size11", "font_size12" ]
+        },
+        "alt_heading_size_small" : {
+          "type": "string",
+          "enum": [ "font_size1", "font_size2", "font_size3", "font_size4", "font_size5",
+          "font_size6", "font_size7", "font_size8", "font_size9", "font_size10", "font_size11", "font_size12" ]
+        },
+        "alt_heading_size_xsmall" : {
+          "type": "string",
+          "enum": [ "font_size1", "font_size2", "font_size3", "font_size4", "font_size5",
+          "font_size6", "font_size7", "font_size8", "font_size9", "font_size10", "font_size11", "font_size12" ]
+        },
+        "alt_heading_size_xxsmall" : {
+          "type": "string",
+          "enum": [ "font_size1", "font_size2", "font_size3", "font_size4", "font_size5",
+          "font_size6", "font_size7", "font_size8", "font_size9", "font_size10", "font_size11", "font_size12" ]
+        },
+        "spacing_scale" : {
+          "type": "string",
+          "enum": ["spacing_scale_small", "spacing_scale_medium", "spacing_scale_large"]
+        },
+        "font_scale" : {
+          "type": "string",
+          "enum": ["font_scale1", "font_scale2"]
+        },
+        "content_max_width" : { "$ref": "#/definitions/size"}
+      }
+    }
+  },
+  "definitions": {
+    "color_raw": {
+      "type": "string",
+      "pattern": "#([a-f]|[A-F]|[0-9]){3}(([a-f]|[A-F]|[0-9]){3})?"
+    },
+    "defined_color" : {
+      "type": "string",
+      "enum": [
+        "color1_faded", "color1_light", "color1_bright", "color1_main", "color1_dark",
+        "color2_faded", "color2_light", "color2_bright", "color2_main", "color2_dark",
+        "white", "gray05", "gray10", "gray20", "gray30",
+        "gray40", "gray60", "gray70", "gray80", "gray90", "black"
+      ]
+    },
+    "color_mode": {
+      "type": "object",
+      "options": {
+        "disable_edit_json": true,
+        "disable_properties": true
+      },
+      "additionalProperties": false,
+      "properties": {
+        "primary_foreground": { "$ref": "#/definitions/defined_color" },
+        "secondary_foreground": { "$ref": "#/definitions/defined_color" },
+        "accent": { "$ref": "#/definitions/defined_color" },
+        "ui": { "$ref": "#/definitions/defined_color" },
+        "buttons": { "$ref": "#/definitions/defined_color" },
+        "background": { "$ref": "#/definitions/defined_color" }
+      },
+      "required": [
+        "primary_foreground", "secondary_foreground", "accent",
+        "ui", "buttons", "background"
+      ]
+    },
+    "font": {
+      "type": "object",
+      "options": {
+        "disable_edit_json": true,
+        "disable_properties": true
+      },
+      "additionalProperties": false,
+      "properties": {
+        "family": { "type": "string" },
+        "fallback_family": { "type": "string" },
+        "normal": { "$ref": "#/definitions/font_weight" },
+        "bold": { "$ref": "#/definitions/font_weight" },
+        "text_transform": {
+          "type": "string",
+          "enum": [
+            "none", "capitalize", "uppercase",
+            "lowercase", "initial", "inherit"
+          ]
+        },
+        "letter_spacing": { "$ref": "#/definitions/size" },
+        "line_height_ratio_small": { "$ref": "#/definitions/line_height" },
+        "line_height_ratio_medium": { "$ref": "#/definitions/line_height" },
+        "line_height_ratio_large": { "$ref": "#/definitions/line_height" }
+      },
+      "required": [
+        "family", "fallback_family", "normal",
+        "bold", "text_transform", "letter_spacing",
+        "line_height_ratio_small", "line_height_ratio_medium", "line_height_ratio_large"
+      ]
+    },
+    "font_weight": { "type": "string" },
+    "size": { "type": "string" },
+    "line_height": { "type": "string" },
+    "font_scale": {
+      "type": "object",
+      "options": {
+        "disable_edit_json": true,
+        "disable_properties": true,
+        "collapsed": true
+      },
+      "additionalProperties": false,
+      "properties": {
+        "font_size1": { "type": "object", "$ref": "#/definitions/scale" },
+        "font_size2": { "type": "object", "$ref": "#/definitions/scale" },
+        "font_size3": { "type": "object", "$ref": "#/definitions/scale" },
+        "font_size4": { "type": "object", "$ref": "#/definitions/scale" },
+        "font_size5": { "type": "object", "$ref": "#/definitions/scale" },
+        "font_size6": { "type": "object", "$ref": "#/definitions/scale" },
+        "font_size7": { "type": "object", "$ref": "#/definitions/scale" },
+        "font_size8": { "type": "object", "$ref": "#/definitions/scale" },
+        "font_size9": { "type": "object", "$ref": "#/definitions/scale" },
+        "font_size10": { "type": "object", "$ref": "#/definitions/scale" },
+        "font_size11": { "type": "object", "$ref": "#/definitions/scale" },
+        "font_size12": { "type": "object", "$ref": "#/definitions/scale" }
+      },
+      "required": [
+        "font_size1", "font_size2", "font_size3", "font_size4", "font_size5",
+        "font_size6", "font_size7", "font_size8", "font_size9", "font_size10", "font_size11", "font_size12"
+      ]
+    },
+    "spacing_scale": {
+      "type": "object",
+      "options": {
+        "disable_edit_json": true,
+        "disable_properties": true,
+        "collapsed": true
+      },
+      "additionalProperties": false,
+      "properties": {
+        "space_size0": { "type": "string" },
+        "space_size1": { "type": "string" },
+        "space_size2": { "type": "string" },
+        "space_size3": { "type": "string" },
+        "space_size4": { "type": "string" },
+        "space_size5": { "type": "string" },
+        "space_size6": { "type": "string" },
+        "space_size7": { "type": "string" },
+        "space_size8": { "type": "string" },
+        "space_size9": { "type": "string" }
+      },
+      "required": [
+        "space_size0", "space_size1", "space_size2", "space_size3", "space_size4",
+        "space_size5", "space_size6", "space_size7", "space_size8", "space_size9"
+      ]
+    },
+    "scale": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "wide": { "$ref": "#/definitions/size" },
+        "narrow": { "$ref": "#/definitions/size" }
+      },
+      "required": [ "wide", "narrow"]
+    }
+  }
+}
