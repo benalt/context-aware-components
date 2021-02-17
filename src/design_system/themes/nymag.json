@@ -1,0 +1,31 @@
+{
+  "@extends": "default",
+  "color" : {
+    "@extends": "@default.color",
+    "primary-faded": "#ed6e51",
+    "primary-light": "#ffd5cc",
+    "primary-bright": "#ec2c00",
+    "primary-main": "#ec2c00",
+    "primary-dark": "#b0503b",
+    "accent1" : "#00bcf1",
+    "accent2" : "#0147a5"
+  },
+  "accent1-mode" : {
+    "@extend" : "primary-mode",
+    "primary-foreground": "var(--color-accent1)",
+    "secondary-foreground": "var(--color-accent2)",
+    "accent": "var(--color-primary)"
+  },
+  "accent2-mode" : {
+    "@extend" : "primary-mode",
+    "primary-foreground": "var(--color-accent2)",
+    "secondary-foreground": "var(--color-accent1)",
+    "accent": "var(--color-primary)"
+  },
+  "font1" : {
+    "family": "Egyptienne,Georgia,serif"
+  },
+  "font2" : {
+    "family": "'Miller Text',Georgia,serif"
+  }
+}
