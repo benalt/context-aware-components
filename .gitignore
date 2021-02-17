@@ -1,6 +1,5 @@
 node_modules/
 dist-server
-bin
 .DS_Store
 .DS_Store?
 ._*
