@@ -9,6 +9,9 @@
     "accent1" : "#00bcf1",
     "accent2" : "#0147a5"
   },
+  "color-mode-white": {
+    "primary-foreground": "var(--color-accent2)"
+  },
   "color-mode-accent1" : {
     "@extends" : "color-mode-white",
     "primary-foreground": "var(--color-accent1)",

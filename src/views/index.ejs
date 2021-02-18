@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link type="text/css" rel="stylesheet" href="/stylesheets/style.css" />
   </head>
   <body class="container">
     <main class="component-area">
       <%- renderComponent(context.componentName) %>
     </main>
-
     <style type="text/css">
       <%= renderDesignTokens() %>
       <%= renderStylesheets() %>

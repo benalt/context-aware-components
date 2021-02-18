@@ -1,6 +1,8 @@
 import ejs from 'ejs';
 import fs from 'fs';
 import path from 'path';
+import _ from 'lodash';
+import subList from '../unstyled_entry_list';
 
 const template = fs.readFileSync( path.resolve(__dirname, './index.ejs'), 'utf8');
 
@@ -14,7 +16,8 @@ export default class RelatedList {
     this.data = data;
   }
   
-  render(context) {
-    return ejs.render(template, context.data, {});
+  render() {
+    let list = new subList(this.renderContext);
+    return ejs.render(template, _.merge( this.renderContext.data, { list : list }), {});
   }
 }

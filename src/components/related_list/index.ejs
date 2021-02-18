@@ -1,10 +1,7 @@
-<div class="related-list" id="my-specific-selector">
-  <style type="text/css">
-#my-specific-selector {
-  --color-black : blue;
-  font-size: var(--font-scale2-size9-wide);
-  
-}
-  </style>
-  This is the related list
+<div class="related-list" id="my-specific-selector">  
+  <h2>Most Popular</h2>
+  <%- list.render() %>
+  <div class="cta">
+    <a class="cta_more" href="#">More in Most Recent</a>
+  </div>
 </div>

@@ -1,4 +1,17 @@
 .related-list {
-  background-color: var(--color-primary-main);
-  color: var(--color-white);
+  max-width: 400px; 
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+  
+  .entry_list_image,
+  .entry_list_image img  {
+    display: block;
+    max-width: 100%;
+  }
+
+  .entry-list-item-byline {}
+  .entry-list-item-timestamp {}
 }

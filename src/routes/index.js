@@ -20,9 +20,8 @@ router.get('/', function(req, res, next) {
     title: 'Component Explorer', 
     context: context, 
     renderComponent: ( componentName ) => {
-      // track which components are in use
       context.components.push(componentName);
-      return Component.getComponentInstance(componentName).render(context);
+      return Component.getComponentInstance(componentName, context).render();
     },
     renderDesignTokens: () => {
       let tokens = new DesignSystemTokens(context)
