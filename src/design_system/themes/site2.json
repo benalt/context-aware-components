@@ -8,9 +8,9 @@
     "primary-dark": "#e2127A"
   },
   "font1" : {
-    "family": "Egyptienne,Georgia,serif"
+    "family": "'Oswald', sans-serif"
   },
   "font2" : {
-    "family": "'Miller Text',Georgia,serif"
+    "family": "'Shippori Mincho', serif"
   }
 }

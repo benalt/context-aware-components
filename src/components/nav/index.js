@@ -12,7 +12,6 @@ const template = fs.readFileSync( path.resolve(__dirname, './index.ejs'), 'utf8'
 export default class Nav {
   constructor(renderContext) {
     this.renderContext = renderContext;
-    this.data = data;
   }
   render() {
     return ejs.render(template, this.renderContext, {});

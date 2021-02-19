@@ -31,7 +31,6 @@ router.get('/', function(req, res, next) {
     renderStylesheets: () => {
       let cssLoader = new DesignSystemCSSLoader(context);
       return `
-/* rendidering styles for ${ context.components.join(', ')} */ 
 ${cssLoader.renderCss(context)}`;
     }
   });

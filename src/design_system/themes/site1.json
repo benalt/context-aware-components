@@ -25,9 +25,6 @@
     "accent": "var(--color-primary)"
   },
   "font1" : {
-    "family": "Egyptienne,Georgia,serif"
-  },
-  "font2" : {
-    "family": "'Miller Text',Georgia,serif"
+    "family": "'IBM Plex Sans', sans-serif"
   }
 }

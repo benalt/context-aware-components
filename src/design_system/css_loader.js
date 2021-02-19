@@ -8,7 +8,10 @@ class CSSLoader {
 
   renderCss(){
     const theme = this.context.theme || "default";
-    const csses = []
+    const csses = [
+      fs.readFileSync( path.resolve(__dirname, '../design_system/baseline.css'), 'utf8')
+    ];
+
     for (let i=0; i < this.context.components.length; i++ ) {
       const componentName = this.context.components[i];
       const cssFile = `../components/${componentName}/${theme}.css`;

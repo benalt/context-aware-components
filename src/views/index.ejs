@@ -2,14 +2,21 @@
 <html lang="en">
   <head>
     <link type="text/css" rel="stylesheet" href="/stylesheets/style.css" />
+    <!-- Temporary to get fonts in till i figure out how to do base-level packages -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,900&display=swap" rel="stylesheet">
+    <!-- end font stuff -->
   </head>
   <body class="container">
     <main class="component-area">
       <%- renderComponent(context.componentName) %>
     </main>
     <style type="text/css">
-      <%= renderDesignTokens() %>
-      <%= renderStylesheets() %>
+      <%- renderDesignTokens() %>
+      <%- renderStylesheets() %>
     </style>
   </body>
 </html>

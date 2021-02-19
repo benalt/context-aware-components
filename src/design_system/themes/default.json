@@ -18,7 +18,7 @@
     "black": "#000000"
   },
   "font1" : {
-    "family": "Graphik-Regular",
+    "family": "'Roboto', sans-serif",
     "fallback-family" : "sans-serif",
     "normal": "400",
     "bold": "700",
@@ -29,7 +29,7 @@
     "line-height-ratio-large":"1.6"
   },
   "font2" : {
-    "family": "Source Serif Pro",
+    "family": "Georgia",
     "fallback-family" : "serif",
     "normal": "400",
     "bold": "700",
